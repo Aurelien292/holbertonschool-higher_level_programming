@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from sys 
+    from sys import argv
     ac = len(argv) - 1
 
     print(ac, end=" ")

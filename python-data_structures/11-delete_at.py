@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def delete_at(my_list=None, idx=0):
     if my_list is None:
         my_list = []

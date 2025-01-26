@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """
 Ce module a une fonction def say_my_name.
 Fonction acceptant les str pour first name et last name

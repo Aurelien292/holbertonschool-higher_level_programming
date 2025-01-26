@@ -1,0 +1,24 @@
+# Test de la fonction say_my_name avec des noms valides (prénom et nom de famille)
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("John", "Doe")
+My name is John Doe
+
+# Test de la fonction say_my_name avec un seul prénom (le nom de famille est vide)
+>>> say_my_name("John")
+My name is John 
+
+# Test de la fonction say_my_name avec des noms valides et un nom de famille vide
+>>> say_my_name("John", "")
+My name is John 
+
+# Test de la fonction say_my_name avec des arguments invalides pour le prénom
+>>> say_my_name("John", 123)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+# Test de la fonction say_my_name avec des arguments invalides pour le prénom
+>>> say_my_name(123, "Doe")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string

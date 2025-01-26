@@ -26,7 +26,7 @@
 >>> add_integer(4, "School")
 Traceback (most recent call last):
     ...
-TypeError: b must be an integer
+b must be an integer
 
 # Test avec un argument None
 >>> add_integer(None, None)

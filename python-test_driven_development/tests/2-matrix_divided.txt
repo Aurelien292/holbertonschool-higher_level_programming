@@ -1,0 +1,22 @@
+# Test de la fonction matrix_divided avec une matrice d'entiers et un diviseur entier
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix_divided([[2, 4], [6, 8]], 2)
+[[1.0, 2.0], [3.0, 4.0]]
+
+# Test de la fonction matrix_divided avec une matrice de flottants et un diviseur entier
+>>> matrix_divided([[1.5, 3.5], [5.5, 7.5]], 2)
+[[0.75, 1.75], [2.75, 3.75]]
+
+# Test de la fonction matrix_divided avec une matrice mixte (entiers et flottants)
+>>> matrix_divided([[1, 2.5], [3.5, 4]], 2)
+[[0.5, 1.25], [1.75, 2.0]]
+
+# Test de la fonction matrix_divided avec une matrice contenant une seule ligne
+>>> matrix_divided([[10, 20, 30]], 1)
+[[10.0, 20.0, 30.0]]
+
+# Test de la fonction matrix_divided avec une division par zéro
+>>> matrix_divided([[1, 2], [3, 4]], 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero

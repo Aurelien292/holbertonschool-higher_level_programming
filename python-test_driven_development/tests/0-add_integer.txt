@@ -28,3 +28,8 @@ TypeError: a must be an integer
 >>> add_integer(10, -3)
 7
 
+>>> add_integer(20, 3)
+23
+
+>>> add_integer(20, 3)
+23

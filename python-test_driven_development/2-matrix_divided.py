@@ -1,4 +1,13 @@
 #!/usr/bin/python3
+"""
+    Retourne une nouvelle matrice où chaque élément a été divisé par div.
+
+    Args:
+        matrix (list): Liste de listes d'entiers ou de flottants.
+        div (int, float): Le diviseur, doit être >= 0.
+    """
+
+
 def matrix_divided(matrix, div):
     """
     Retourne une nouvelle matrice où chaque élément a été divisé par div.

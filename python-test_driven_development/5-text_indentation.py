@@ -16,6 +16,8 @@ def text_indentation(text):
     for c in range(len(text)):
         line += text[c]
         if text[c] in ".?:":
+            # supprimer les espaces (ou autres caractères spécifiés) au
+            # début d'une chaîne de caractères.
             print((line + '\n').lstrip(' '))
             line = ""
     print(line.lstrip(' '), end='')

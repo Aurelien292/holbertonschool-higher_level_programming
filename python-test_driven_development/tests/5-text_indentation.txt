@@ -1,0 +1,26 @@
+# Test de la fonction text_indentation avec une chaîne de texte normale
+>>> text_indentation = __import__('3-text_indentation').text_indentation
+>>> text_indentation("Hello. How are you? I am fine!")
+Hello.
+How are you?
+I am fine!
+
+# Une chaîne de texte vide
+>>> text_indentation("")
+<nothing printed>
+
+# Une phrase commençant par un espace avant la ponctuation
+>>> text_indentation("  Hello. How are you?")
+Hello.
+How are you?
+
+# Texte contenant des espaces multiples avant la ponctuation
+>>> text_indentation("Hello    .    How are you?")
+Hello.
+How are you?
+
+# Test avec des caractères spéciaux
+>>> text_indentation("This is a test: with some punctuation? Let's check!")
+This is a test:
+with some punctuation?
+Let's check!

@@ -9,13 +9,7 @@
 
 
 def matrix_divided(matrix, div):
-    """
-    Retourne une nouvelle matrice où chaque élément a été divisé par div.
 
-    Args:
-        matrix (list): Liste de listes d'entiers ou de flottants.
-        div (int, float): Le diviseur, doit être >= 0.
-    """
     # Vérifie si 'matrix' est bien une liste
     if type(matrix) is not list:
         raise TypeError("matrix must be a matrix (list of lists)\

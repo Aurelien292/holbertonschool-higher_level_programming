@@ -1,35 +1,37 @@
+# Test de la fonction add_integer avec des entiers simples
 >>> add_integer = __import__('0-add_integer').add_integer
-
 >>> add_integer(2, 3)
 5
 
->>> add_integer(1, 2)
+# Test de la fonction add_integer avec un entier et un flottant
+>>> add_integer(1, 2.5)
 3
 
->>> add_integer(-1, -2.5)
+
+>>> add_integer(3.1, 2.3)
+5
+
+# Test de la fonction add_integer avec un entier et une valeur par défaut pour b
+>>> add_integer(10)
+108
+
+# Test de la fonction add_integer avec deux entiers négatifs
+>>> add_integer(-1, -2)
 -3
 
->>> add_integer(100.3, -2)
-98
+# Test de la fonction add_integer avec un entier et un flottant négatif
+>>> add_integer(5, -2.5)
+3
 
+# Test de la fonction add_integer avec des arguments invalides
 >>> add_integer(4, "School")
 Traceback (most recent call last):
     ...
-b must be an integer
+TypeError: b must be an integer
 
->>> add_integer(None,None)
+# Test avec un argument None
+>>> add_integer(None, None)
 Traceback (most recent call last):
     ...
-a must be an integer
+TypeError: a must be an integer
 
->>> add_integer(10, 5)
-15
-
->>> add_integer(10, -3)
-7
-
->>> add_integer(20, 3)
-23
-
->>> add_integer(20, 3)
-23

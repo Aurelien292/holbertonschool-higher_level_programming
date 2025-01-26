@@ -12,11 +12,15 @@
 >>> add_integer(100.3, -2)
 98
 
->>> add_integer(4, "School)
-b must be an integer
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
 
 >>> add_integer(None,None)
-a must be an integer
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
 
 >>> add_integer(10, 5)
 15
@@ -24,8 +28,3 @@ a must be an integer
 >>> add_integer(10, -3)
 7
 
->>> add_integer(20, 3)
-23
-
->>> add_integer(20, 3)
-23

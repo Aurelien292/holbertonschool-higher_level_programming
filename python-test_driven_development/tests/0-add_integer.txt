@@ -28,6 +28,11 @@ Traceback (most recent call last):
     ...
 b must be an integer
 
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
 # Test avec un argument None
 >>> add_integer(None, None)
 Traceback (most recent call last):

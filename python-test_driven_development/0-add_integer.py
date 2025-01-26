@@ -9,8 +9,8 @@ de a et b une fois convertie en int
 def add_integer(a, b=98):
 
     """Si l'un des arguments n'est pas un entier ou un flottant,
-    elle lève une exception TypeError. Les flottants sont convertis en entiers avant 
-    de retourner la somme des deux valeurs. """
+    elle lève une exception TypeError. Les flottants sont convertis
+    en entiers avant de retourner la somme des deux valeurs. """
     if type(a) is not int and type(a) is not float:
         raise TypeError("a must be an integer")
     if type(b) is not int and type(b) is not float:

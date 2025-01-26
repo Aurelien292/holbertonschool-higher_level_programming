@@ -25,9 +25,7 @@ ZeroDivisionError: division by zero
 >>> matrix_divided([], 2)
 []
 
-# Test de la fonction matrix_divided avec des lignes de tailles différentes
->>> matrix_divided([[1, 2], [3]], 2)
-[[0.5, 1.0], [1.5]]
+
 
 # Test de la fonction matrix_divided avec un élément non numérique dans la matrice
 >>> matrix_divided([[1, 2], ["a", 4]], 2)

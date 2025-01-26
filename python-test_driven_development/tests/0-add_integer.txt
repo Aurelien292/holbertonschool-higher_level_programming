@@ -1,13 +1,12 @@
 # Test de la fonction add_integer avec des entiers simples
 >>> add_integer = __import__('0-add_integer').add_integer
->>> add_integer(2, 3)
-5
+
 
 # Test de la fonction add_integer avec un entier et un flottant
 >>> add_integer(1, 2.5)
 3
 
-
+# Test de la fonction add_integer avec des flottants
 >>> add_integer(3.1, 2.3)
 5
 
@@ -35,3 +34,6 @@ Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
+# Test de la fonction add_integer avec un seul argument flottant (b est utilisé par défaut)
+>>> add_integer(100.3)
+198

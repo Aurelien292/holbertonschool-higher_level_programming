@@ -1,6 +1,7 @@
 # Test de la fonction add_integer avec des entiers simples
 >>> add_integer = __import__('0-add_integer').add_integer
-
+>>> add_integer(2, 3)
+5
 
 # Test de la fonction add_integer avec un entier et un flottant
 >>> add_integer(1, 2.5)
@@ -26,7 +27,7 @@
 >>> add_integer(4, "School")
 Traceback (most recent call last):
     ...
-b must be an integer
+TypeError: b must be an integer
 
 >>> add_integer(4, "School")
 Traceback (most recent call last):
@@ -42,3 +43,31 @@ TypeError: a must be an integer
 # Test de la fonction add_integer avec un seul argument flottant (b est utilisé par défaut)
 >>> add_integer(100.3)
 198
+
+# Test avec un seul argument entier (b utilise la valeur par défaut)
+>>> add_integer(5)
+103
+
+# Test avec des entiers très grands
+>>> add_integer(1000000000000000, 500000000000000)
+1500000000000000
+
+# Test avec des flottants très petits
+>>> add_integer(0.0000000001, 0.0000000002)
+0
+
+# Test avec un entier négatif pour b
+>>> add_integer(10, -5)
+5
+
+# Test avec b comme une liste
+>>> add_integer(10, [])
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+# Test avec b comme un dictionnaire
+>>> add_integer(10, {})
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer

@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+"""
+Une classe qui définit un carré.
+"""
+
+
 class Square:
+
     """
     Une classe qui définit un carré.
 

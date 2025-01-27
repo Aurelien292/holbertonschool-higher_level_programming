@@ -1,3 +1,8 @@
+"""
+Module qui définit une classe Square représentant un carré.
+"""
+
+
 class Square:
     """
     Classe représentant un carré avec une taille de côté et une
@@ -102,4 +107,4 @@ class Square:
         Retourne:
             int: L'aire du carré (size ** 2).
         """
-        return self.__size ** 2
+        return self.__size * self.__size

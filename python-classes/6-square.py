@@ -1,3 +1,4 @@
+#!usr/bin/python3
 """
 Module qui définit une classe Square représentant un carré.
 """

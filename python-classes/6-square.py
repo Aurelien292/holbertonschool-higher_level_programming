@@ -113,6 +113,6 @@ class Square:
         Calcule et retourne l'aire du carré.
 
         Retourne:
-            int: L'aire du carré (size ** 2).
+            int: L'aire du carré (self.__size * self.__size).
         """
         return self.__size * self.__size

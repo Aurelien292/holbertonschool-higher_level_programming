@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+    Représente un rectangle avec une largeur et une hauteur spécifiées.
+"""
+
+
 class Rectangle:
     """
     Représente un rectangle avec une largeur et une hauteur spécifiées.

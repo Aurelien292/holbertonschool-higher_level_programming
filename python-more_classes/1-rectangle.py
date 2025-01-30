@@ -21,8 +21,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initialise un rectangle avec une largeur et une hauteur spécifiées."""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -54,10 +54,10 @@ class Rectangle:
 
     def area(self):
         """Retourne l'aire du rectangle."""
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
         """Retourne le périmètre du rectangle."""
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return 0
         return 2 * (self.__width + self.__height)

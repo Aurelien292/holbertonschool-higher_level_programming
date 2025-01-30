@@ -174,14 +174,6 @@ class Rectangle:
             return 0
         return 2 * (self.width + self.height)
 
-    def my_print(self):
-        """
-        Affiche le rectangle avec des # et la représentation de l'objet.
-
-        Si la largeur ou la hauteur est égale à 0, affiche une ligne vide.
-        """
-        print(self.__str__())  # Afficher le rectangle avec des #
-        print(self)  # Afficher la représentation classique de l'objet
 
     def __del__(self):
         """

@@ -27,7 +27,7 @@ class Square:
         area(): Retourne l'aire du carré.
     """
 
-    def __init__(self, size=0, position=(0, 0)):
+    def __init__(self, size, position):
         """
         Initialise un carré avec une taille et une position données.
 

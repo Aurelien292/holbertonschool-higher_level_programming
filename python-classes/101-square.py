@@ -118,7 +118,7 @@ class Square:
     def __str__(self):
         result = []
         if self.__size == 0:
-            return ""
+            return "\n" * self.__position[1]
         for _ in range(self.__position[1]):
             result.append("")
         for _ in range(self.__size):

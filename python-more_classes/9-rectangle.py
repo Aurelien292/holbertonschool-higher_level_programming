@@ -52,7 +52,7 @@ class Rectangle:
     """
     # Déclare un attribut de classe pour suivre le nombre d'instances
     number_of_instances = 0
-    # Déclare un attribut de classe pour afficher différents symboles
+    # Déclare un attribut de classe pour afficher differents symbols
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
@@ -65,17 +65,35 @@ class Rectangle:
         """
         self.__width = width
         self.__height = height
-        """Incrémente le compteur d'instances lors de la création d'une nouvelle instance"""
+        """
+        Incrémente le compteur d'instances lors de la création
+        d'une nouvelle instance
+        """
         Rectangle.number_of_instances += 1
 
     @property
     def width(self):
-        """Retourne la largeur du rectangle."""
+        """
+        Retourne la largeur du rectangle.
+
+        Retour:
+            int: La largeur du rectangle.
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Vérifie que la largeur est un entier et >= 0."""
+        """
+        Définit la largeur du rectangle. Vérifie que la
+        largeur est un entier et >= 0.
+
+        Paramètres:
+            value (int): La largeur du rectangle.
+
+        Lève:
+            TypeError: Si la largeur n'est pas un entier.
+            ValueError: Si la largeur est inférieure à 0.
+        """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -84,12 +102,27 @@ class Rectangle:
 
     @property
     def height(self):
-        """Retourne la hauteur du rectangle."""
+        """
+        Retourne la hauteur du rectangle.
+
+        Retour:
+            int: La hauteur du rectangle.
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Vérifie que la hauteur est un entier et >= 0."""
+        """
+        Définit la hauteur du rectangle. Vérifie que la hauteur
+        est un entier et >= 0.
+
+        Paramètres:
+            value (int): La hauteur du rectangle.
+
+        Lève:
+            TypeError: Si la hauteur n'est pas un entier.
+            ValueError: Si la hauteur est inférieure à 0.
+        """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -98,8 +131,13 @@ class Rectangle:
 
     def __str__(self):
         """
-        Retourne une chaîne représentant le rectangle avec le symbole `print_symbol`.
-        Si la largeur ou la hauteur est égale à 0, retourne une chaîne vide.
+        Retourne une chaîne représentant le rectangle avec le symbole
+        `print_symbol`.
+
+        Retour:
+            str: Représentation du rectangle sous forme de
+            `print_symbol` ou une
+            chaîne vide si les dimensions sont nulles.
         """
         if self.width == 0 or self.height == 0:
             return ""
@@ -109,30 +147,52 @@ class Rectangle:
     def __repr__(self):
         """
         Retourne une chaîne qui permet de recréer l'objet avec eval().
+
+        Retour:
+            str: La chaîne de représentation du rectangle sous la forme
+                 "Rectangle(width, height)".
         """
         return f"Rectangle({self.__width}, {self.__height})"
 
     def area(self):
-        """Calcule et retourne l'aire du rectangle (largeur * hauteur)."""
+        """
+        Calcule et retourne l'aire du rectangle.
+
+        Retour:
+            int: L'aire du rectangle (largeur * hauteur).
+        """
         return self.width * self.height
 
     def perimeter(self):
         """
-        Calcule et retourne le périmètre du rectangle (2 * (largeur + hauteur)).
-        Si la largeur ou la hauteur est égale à 0, retourne 0.
+        Calcule et retourne le périmètre du rectangle.
+
+        Retour:
+            int: Le périmètre du rectangle (2 * (largeur + hauteur)).
         """
         if self.width == 0 or self.height == 0:
             return 0
         return 2 * (self.width + self.height)
 
     def my_print(self):
-        """Affiche le rectangle avec des `#` et la représentation de l'objet."""
+        """
+        Affiche le rectangle avec des # et la représentation de l'objet.
+
+        Si la largeur ou la hauteur est égale à 0, affiche une ligne vide.
+        """
         print(self.__str__())  # Afficher le rectangle avec des #
         print(self)  # Afficher la représentation classique de l'objet
 
     def __del__(self):
-        """Cette méthode est appelée lorsqu'une instance de Rectangle est supprimée."""
+        """
+        Cette méthode est appelée lorsqu'une instance de Rectangle
+        est supprimée.
+        """
         print("Bye rectangle...")
+
+        """Décrémenter le compteur d'instances lors
+         de la suppression d'une instance
+        """
         Rectangle.number_of_instances -= 1
 
     @staticmethod
@@ -155,5 +215,12 @@ class Rectangle:
         """
         Retourne une nouvelle instance de Rectangle où la largeur et la hauteur
         sont égales à size.
+
+        Paramètres:
+            size (int): La taille du côté du carré. Défaut à 0 si non spécifié.
+
+        Retourne:
+            Rectangle: Une nouvelle instance de Rectangle avec la largeur et
+            la hauteur égales à size.
         """
         return cls(size, size)

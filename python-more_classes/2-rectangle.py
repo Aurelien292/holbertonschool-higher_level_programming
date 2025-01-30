@@ -110,17 +110,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    def __repr__(self):
-        """
-        Retourne la représentation textuelle du rectangle sous la forme:
-        "Rectangle(width=X, height=Y)", où X et Y sont les valeurs de
-        la largeur et de la hauteur.
-
-        Retour:
-            str: La représentation du rectangle.
-        """
-        return f"Rectangle(width={self.__width}, height={self.__height})"
-
     def area(self):
         """
         Calcule et retourne l'aire du rectangle.

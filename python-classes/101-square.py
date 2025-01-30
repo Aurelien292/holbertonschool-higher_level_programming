@@ -103,10 +103,8 @@ class Square:
         for _ in range(self.position[1]):
             print()
 
-        # Générer et imprimer chaque ligne du carré
-        row = ' ' * self.position[0] + '#' * self.size
-        for _ in range(self.size):
-            print(row)
+        for _ in range(self.__size):
+            print(" " * self.__position[0] + "#" * self.__size)
 
     def area(self):
         """
@@ -121,9 +119,9 @@ class Square:
         result = []
         if self.__size == 0:
             return "\n"
-        for i in range(self.__position[1]):
+        for _ in range(self.__position[1]):
             result.append("")
-        for i in range(self.__size):
+        for _ in range(self.__size):
             result.append(" " * self.__position[0] + "#" * self.__size)
             
         return "\n".join(result)

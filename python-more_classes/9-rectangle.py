@@ -152,7 +152,7 @@ class Rectangle:
             str: La chaîne de représentation du rectangle sous la forme
                  "Rectangle(width, height)".
         """
-        return "Rectangle({self.__width}, {self.__height})"
+        return f"Rectangle(width, height)"
 
     def area(self):
         """

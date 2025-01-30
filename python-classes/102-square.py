@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+    Représente un carré avec une taille spécifiée et permet
+    des comparaisons basées sur l'aire.
+"""
+
 
 class Square:
     """

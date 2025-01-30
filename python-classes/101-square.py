@@ -96,12 +96,12 @@ class Square:
         Si la taille est 0, une ligne vide sera imprimée.
         """
         if self.size == 0:
-            print(" " * self.__position[0])
+            print("")
             return
 
         # Imprimer les lignes vides selon le décalage vertical
         for _ in range(self.__position[1]):
-            print()
+            print("")
 
         for _ in range(self.size):
             print(" " * self.__position[0] + "#" * self.__size)
@@ -116,12 +116,13 @@ class Square:
         return self.__size * self.__size
     
     def __str__(self):
-        result = []
+        
         if self.__size == 0:
             return ""
+        result = ""
         for _ in range(self.__position[1]):
-            result.append("")
+            result += "\n"
         for _ in range(self.__size):
-            result.append(" " * self.__position[0] + "#" * self.__size)
+            result += " " * self.__position[0] + "#" * self.__size + "\n"
             
-        return "\n".join(result)
+        return result.rstrip()

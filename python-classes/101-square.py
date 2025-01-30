@@ -96,7 +96,7 @@ class Square:
         Si la taille est 0, une ligne vide sera imprimée.
         """
         if self.size == 0:
-            print()
+            print(" " * self.__position[0])
             return
 
         # Imprimer les lignes vides selon le décalage vertical

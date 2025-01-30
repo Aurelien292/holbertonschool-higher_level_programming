@@ -2,6 +2,8 @@
 """
 class rectangle.
 """
+
+
 class Rectangle:
     """
     Représente un rectangle.

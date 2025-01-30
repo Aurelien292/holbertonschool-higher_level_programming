@@ -145,7 +145,8 @@ class Rectangle:
         Retour:
             str: La représentation classique de l'objet.
         """
-        return f"<3-rectangle.{self.__class__.__name__}object at {hex(id(self))}>"
+        return ("<3-rectangle." +
+                f"{self.__class__.__name__} object at {hex(id(self))}>")
 
     def area(self):
         """

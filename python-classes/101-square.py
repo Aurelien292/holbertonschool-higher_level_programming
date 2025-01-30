@@ -101,7 +101,7 @@ class Square:
 
         # Imprimer les lignes vides selon le décalage vertical
         for _ in range(self.__position[1]):
-            print()
+            print(" ")
 
         for _ in range(self.size):
             print(" " * self.__position[0] + "#" * self.__size)

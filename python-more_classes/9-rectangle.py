@@ -152,7 +152,7 @@ class Rectangle:
             str: La chaîne de représentation du rectangle sous la forme
                  "Rectangle(width, height)".
         """
-        return f"Rectangle({self.__width}, {self.__height})"
+        return "Rectangle({self.__width}, {self.__height})"
 
     def area(self):
         """
@@ -212,4 +212,15 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        """
+        Retourne une nouvelle instance de Rectangle où la largeur et la hauteur
+        sont égales à size.
+
+        Paramètres:
+            size (int): La taille du côté du carré. Défaut à 0 si non spécifié.
+
+        Retourne:
+            Rectangle: Une nouvelle instance de Rectangle avec la largeur et
+            la hauteur égales à size.
+        """
         return cls(size, size)

@@ -3,6 +3,7 @@
     Représente un rectangle avec une largeur et une hauteur spécifiées.
 """
 
+
 class Rectangle:
     """
     Représente un rectangle avec une largeur et une hauteur spécifiées.
@@ -20,7 +21,8 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
-        """Initialise un rectangle avec une largeur et une hauteur spécifiées."""
+        """Initialise un rectangle avec une largeur et une
+        hauteur spécifiées."""
         self.width = width
         self.height = height
 
@@ -51,4 +53,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-

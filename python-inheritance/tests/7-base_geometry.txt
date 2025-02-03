@@ -1,0 +1,30 @@
+# Test de la méthode integer_validator de la classe BaseGeometry
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+
+# Test avec une valeur valide (12)
+>>> bg.integer_validator("my_int", 12)  
+>>> bg.integer_validator("width", 89)
+
+# Test avec une valeur non valide (chaîne "John" au lieu d'un entier)
+>>> try:
+...    bg.integer_validator("name", "John")
+... except Exception as e:
+...    print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+
+# Test avec un age non valide égale à 0.
+>>> try:
+...    bg.integer_validator("age", 0)
+... except Exception as e:
+...    print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] age must be greater than 0
+
+# Test avec une valeur non valide inferieur à 0.
+>>> try:
+...    bg.integer_validator("distance", -4)
+... except Exception as e:
+...    print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] distance must be greater than 0

@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
     Retourne True si l'objet est une instance de la classe spécifiée,
     ou d'une sous-classe de cette classe, sinon retourne False.

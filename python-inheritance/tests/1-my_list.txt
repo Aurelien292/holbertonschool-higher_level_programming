@@ -1,5 +1,7 @@
+#!/user/bin/python3
 # Test de la méthode print_sorted de la classe MyList
 >>> MyList = __import__('1-my_list').MyList
+
 >>> my_list = MyList([10, 2, 7, 5])
 >>> my_list.print_sorted()
 [2, 5, 7, 10]

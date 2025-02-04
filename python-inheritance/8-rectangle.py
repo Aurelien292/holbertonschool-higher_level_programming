@@ -4,39 +4,7 @@ Cree une class BaseGeometry
 """
 
 
-class BaseGeometry:
-    """
-    class BaseGeometry
-    """
-
-    def area(self):
-        raise Exception("area() is not implemented")
-    """
-    lève une exception pour indiquer
-    que la méthode n'est pas implémentée
-    dans la class de base.
-    """
-
-    def integer_validator(self, name, value):
-        """
-        Valide si la valeur est un entier supérieur à 0.
-        Si la valeur n'est pas un entier, lève une exception TypeError.
-        Si la valeur est inférieure ou égale à 0, lève une exception
-        ValueError.
-
-        Arguments :
-        name -- Le nom de l'attribut (toujours une chaîne de caractères).
-        value -- La valeur à valider (doit être un entier supérieur à 0).
-        """
-        if type(value) is not int:
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
-
-
-"""
-    Classe Rectangle qui hérite de BaseGeometry.
-"""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
@@ -74,7 +42,7 @@ class Rectangle(BaseGeometry):
         - TypeError: Si `width` ou `height` ne sont pas des entiers.
         - ValueError: Si `width` ou `height` sont inférieurs ou égaux à zéro.
         """
-        super().__init__()
+
 
         self.integer_validator("width", width)
         self.__width = width

@@ -27,10 +27,7 @@ class BaseGeometry:
         name -- Le nom de l'attribut (toujours une chaîne de caractères).
         value -- La valeur à valider (doit être un entier supérieur à 0).
         """
-        if not isinstance(value, int) or value <= 0:
-            if not isinstance(value, int):
-                raise TypeError(f"{name} must be an integer")
-            else:
-                raise ValueError(f"{name} must be greater than 0")
-        
-        
+        if type(value) is not int:
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be greater than 0")

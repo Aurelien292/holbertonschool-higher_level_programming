@@ -42,7 +42,6 @@ class Square(Rectangle):
         self.__size = size
         super().__init__(self.__size, self.__size)
 
-
     def __str__(self):
         """
         Retourne une chaîne de caractères représentant le carré.

@@ -3,13 +3,13 @@
 Affiche la liste triée en ordre croissant.
 """
 
-
 class MyList(list):
     """
-    class BaseGeometry
+    Classe héritant de list, avec une méthode print_sorted pour afficher la liste triée.
     """
     def print_sorted(self):
         """
         Affiche la liste triée en ordre croissant.
         """
-        print(sorted(self))
+        self.sort()  # Trie la liste en place
+        print(self)

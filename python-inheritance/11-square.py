@@ -4,40 +4,9 @@
 """
 
 
-class Rectangle:
-    """
-    Classe représentant un rectangle.
-
-    Attributs:
-        width (int): La largeur du rectangle.
-        height (int): La hauteur du rectangle.
-
-    Méthodes:
-        area(): Calcule et retourne l'aire du rectangle.
-    """
-    def __init__(self, width, height):
-        """
-        Initialise un rectangle avec une largeur et une hauteur données.
-
-        Paramètres:
-            width (int): La largeur du rectangle.
-            height (int): La hauteur du rectangle.
-        """
-        self.width = width
-        self.height = height
-
-    def area(self):
-        """
-        Calcule et retourne l'aire du rectangle.
-
-        Retourne:
-            int: L'aire du rectangle (width * height).
-        """
-        return self.width * self.height
-
-
+Rectangle = __import__('9-rectangle').Rectangle
 """
-    Classe représentant un carré, héritée de Rectangle.
+    Classe représentant un rectangle.
 """
 
 

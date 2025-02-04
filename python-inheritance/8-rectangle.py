@@ -74,6 +74,7 @@ class Rectangle(BaseGeometry):
         - TypeError: Si `width` ou `height` ne sont pas des entiers.
         - ValueError: Si `width` ou `height` sont inférieurs ou égaux à zéro.
         """
+        super().__init__()
 
         self.integer_validator("width", width)
         self.__width = width

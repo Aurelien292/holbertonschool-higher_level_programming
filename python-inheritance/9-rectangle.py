@@ -70,11 +70,10 @@ class Rectangle(BaseGeometry):
         - ValueError: Si `width` ou `height` sont inférieurs ou égaux à zéro.
         """
 
-        self.__width = width
-        self.__height = height
-
         self.integer_validator("width", width)
         self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
 
     def area(self):
         """

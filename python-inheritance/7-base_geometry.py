@@ -9,12 +9,12 @@ class BaseGeometry:
     class BaseGeometry
     """
     def area(self):
-        raise Exception("area() is not implemented")
-    """
+        """
     lève une exception pour indiquer
     que la méthode n'est pas implémentée
     dans la class de base.
     """
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """

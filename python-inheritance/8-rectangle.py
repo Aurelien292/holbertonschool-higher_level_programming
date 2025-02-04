@@ -5,6 +5,9 @@ Cree une class BaseGeometry
 
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
+"""
+    Classe Rectangle qui hérite de BaseGeometry.
+"""
 
 
 class Rectangle(BaseGeometry):
@@ -42,7 +45,6 @@ class Rectangle(BaseGeometry):
         - TypeError: Si `width` ou `height` ne sont pas des entiers.
         - ValueError: Si `width` ou `height` sont inférieurs ou égaux à zéro.
         """
-
 
         self.integer_validator("width", width)
         self.__width = width

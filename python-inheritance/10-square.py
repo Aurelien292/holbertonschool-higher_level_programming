@@ -105,4 +105,4 @@ class Square(Rectangle):
         Retourne:
             str: Une chaîne du type "[Square] size/size".
         """
-        return f"[Square] {self.width}/{self.height}"
+        return f"[Rectangle] {self.width}/{self.height}"

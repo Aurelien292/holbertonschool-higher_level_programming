@@ -28,6 +28,6 @@ class BaseGeometry():
         value -- La valeur à valider (doit être un entier supérieur à 0).
         """
         if type(value) is not int:
-            raise TypeError(f"{name} must be an integer")
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+            raise ValueError("{} must be greater than 0".format(name))

@@ -34,6 +34,19 @@ class Rectangle:
             int: L'aire du rectangle (width * height).
         """
         return self.width * self.height
+    
+    def __str__(self):
+        """
+    Retourne une chaîne représentant le rectangle.
+
+    Cette méthode retourne une chaîne formatée décrivant le rectangle
+    au format suivant : [Rectangle] <largeur>/<hauteur>.
+
+    Retourne :
+        str: Une chaîne représentant le rectangle avec ses dimensions.
+    """
+
+        return f"[Rectangle] {self.__width}/{self.__height}"
 
 
 """
@@ -103,6 +116,6 @@ class Square(Rectangle):
         Retourne une chaîne de caractères représentant le carré.
 
         Retourne:
-            str: Une chaîne du type "[Square] size/size".
+            str: Une chaîne du type "[Rectangle] size/size".
         """
         return f"[Rectangle] {self.width}/{self.height}"

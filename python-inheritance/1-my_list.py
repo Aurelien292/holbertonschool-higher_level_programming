@@ -11,6 +11,8 @@ class MyList(list):
     """
     def print_sorted(self):
         """
-        Affiche la liste triée en ordre croissant.
+        Trie la liste en place et affiche la liste triée en ordre croissant.
         """
-        print(sorted(self))
+        new_list = self[:]   # Créer une copie de la liste
+        new_list.sort()  # Trier la copie
+        print(new_list)  # Afficher la copie triée

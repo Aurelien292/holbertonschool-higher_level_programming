@@ -58,6 +58,7 @@ class Square(Rectangle):
     """
 
     def __init__(self, size):
+
         """
         Initialise un carré avec la taille donnée (size).
 
@@ -69,8 +70,6 @@ class Square(Rectangle):
             ValueError: Si size est inférieur ou égal à 0.
         """
         self.integer_validator("size", size)
-        self.__size = size
-
         super().__init__(size, size)
 
     def area(self):

@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-"""
-Affiche la liste triée en ordre croissant.
+"""MyList module.
+
+Contains a class MyList that inherits from list
+and a method that prints the sorted list.
 """
 
 
 class MyList(list):
-    """
-    Classe héritant de list, avec une méthode print_sorted
-    pour afficher la liste triée.
-    """
+    """Defines the MyList class."""
+
     def print_sorted(self):
-        """
-        Affiche la liste triée en ordre croissant.
-        """
+        """Prints the sorted list."""
         print(sorted(self))

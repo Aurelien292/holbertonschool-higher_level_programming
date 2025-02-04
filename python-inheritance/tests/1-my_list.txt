@@ -1,15 +1,17 @@
 # Test de la méthode print_sorted de la classe MyList
-
 >>> MyList = __import__('1-my_list').MyList
 
+# Test 1
 >>> my_list = MyList([10, 2, 7, 5])
 >>> my_list.print_sorted()
-[2, 5, 7, 10]
+# Résultat attendu : [2, 5, 7, 10]
 
+# Test 2
 >>> my_sorted_list = MyList([1, 2, 3, 4, 5])
 >>> my_sorted_list.print_sorted()
-[1, 2, 3, 4, 5]
+# Résultat attendu : [1, 2, 3, 4, 5]
 
+# Test 3
 >>> empty_list = MyList([])
 >>> empty_list.print_sorted()
-[]
+# Résultat attendu : []

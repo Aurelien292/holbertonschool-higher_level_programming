@@ -42,31 +42,6 @@ class Square(Rectangle):
         self.__size = size
         super().__init__(self.__size, self.__size)
 
-    def area(self):
-        """
-        Calcule et retourne l'aire du carré.
-
-        Retourne:
-            int: L'aire du carré (width * height), ici c'est size * size.
-        """
-        return self.width * self.height
-
-    def integer_validator(self, name, value):
-        """
-        Valide que la valeur est un entier positif.
-
-        Paramètres:
-            name (str): Le nom de la variable (ici, "size").
-            value (int): La valeur à valider.
-
-        Lève:
-            TypeError: Si value n'est pas un entier.
-            ValueError: Si value est inférieur ou égal à 0.
-        """
-        if type(value) is not int:
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be a positive integer")
 
     def __str__(self):
         """
@@ -75,4 +50,4 @@ class Square(Rectangle):
         Retourne:
             str: Une chaîne du type "[Rectangle] size/size".
         """
-        return f"[Square] {self.width}/{self.height}"
+        return "[Square] {:d}/{:d}".format(self.__size, self.__size)

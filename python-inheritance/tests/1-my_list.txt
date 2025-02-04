@@ -1,5 +1,5 @@
 # Test de la méthode print_sorted de la classe MyList
->>> MyList = __import__('1-my_list').MyList
+from my_module import MyList
 
 # Test 1
 >>> my_list = MyList([10, 2, 7, 5])

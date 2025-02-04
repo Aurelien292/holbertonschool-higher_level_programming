@@ -34,6 +34,11 @@ class BaseGeometry:
             raise ValueError(f"{name} must be greater than 0")
 
 
+"""
+    Classe Rectangle qui hérite de BaseGeometry.
+"""
+
+
 class Rectangle(BaseGeometry):
     """
     Classe Rectangle qui hérite de BaseGeometry.
@@ -74,4 +79,3 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.integer_validator("height", height)
         self.__height = height
-

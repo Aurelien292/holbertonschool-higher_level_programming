@@ -1,53 +1,61 @@
-=============================
-The ``1-my_list`` module
-=============================
+Test the MyList class
+====================
+>>> MyList = __import__('1-my_list').MyList
 
-Using ``MyList``
----------------------
+# Test empty list
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
 
-Import the class:
+# Test normal case (as in main)
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
 
-    >>> MyList = __import__('1-my_list').MyList
+# Test list with negative numbers
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> my_list.append(-4)
+>>> my_list.append(-2)
+>>> my_list.append(-3)
+>>> my_list.append(-5)
+>>> print(my_list)
+[-1, -4, -2, -3, -5]
+>>> my_list.print_sorted()
+[-5, -4, -3, -2, -1]
+>>> print(my_list)
+[-1, -4, -2, -3, -5]
 
-Now test it:
+# Test one number
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> print(my_list)
+[1]
+>>> my_list.print_sorted()
+[1]
+>>> print(my_list)
+[1]
 
-    >>> my_list = MyList()
-
-    >>> my_list
-    []
-
-    >>> my_list.append(1)
-
-    >>> my_list.append(4)
-
-    >>> my_list.append(2)
-
-    >>> my_list
-    [1, 4, 2]
-
-    >>> my_list.print_sorted()
-    [1, 2, 4]
-
-    >>> my_list
-    [1, 4, 2]
-
-    >>> my_list = MyList([3, 6, 2])
-
-    >>> my_list
-    [3, 6, 2]
-
-    >>> my_list.print_sorted()
-    [2, 3, 6]
-
-    >>> my_list = MyList("hello")
-    
-    >>> my_list
-    ['h', 'e', 'l', 'l', 'o']
-
-    >>> my_list.print_sorted()
-    ['e', 'h', 'l', 'l', 'o']
-
-    >>> new_l = MyList()
-
-    >>> new_l.print_sorted()
-    []
+# Test repeated numbers
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(1)
+>>> my_list.append(1)
+>>> my_list.append(1)
+>>> print(my_list)
+[1, 1, 1, 1]
+>>> my_list.print_sorted()
+[1, 1, 1, 1]
+>>> print(my_list)
+[1, 1, 1, 1]

@@ -46,12 +46,3 @@
 >>> my_sorted_list = MyList(["apple", "banana", "cherry"])
 >>> my_sorted_list.print_sorted()
 ['apple', 'banana', 'cherry']
-
->>> my_sorted_list = MyList([10, "apple", 7, "banana"])
->>> my_sorted_list.print_sorted()
-# Cela dépendra de la gestion des erreurs dans votre code
-
->>> my_sorted_list = MyList([i for i in range(1000000, 0, -1)])
->>> my_sorted_list.print_sorted()
-[1, 2, 3, ..., 999999, 1000000]
-

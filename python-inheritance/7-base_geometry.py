@@ -27,6 +27,8 @@ class BaseGeometry:
         name -- Le nom de l'attribut (toujours une chaîne de caractères).
         value -- La valeur à valider (doit être un entier supérieur à 0).
         """
+        if name is None or value is None:
+            raise TypeError(f"Missing required arguments: 'name' and 'value'")
         if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:

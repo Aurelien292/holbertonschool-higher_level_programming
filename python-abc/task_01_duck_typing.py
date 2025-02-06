@@ -38,8 +38,8 @@ class Rectangle(Shape):
 
 def shape_info(shape):
     try:
-        print(f"Area : {shape.area()}")
-        print(f"Perimeter : {shape.perimeter()}")
+        print(f"Area: {shape.area()}")
+        print(f"Perimeter: {shape.perimeter()}")
 
     except AttributeError:
         None

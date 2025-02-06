@@ -30,3 +30,28 @@
 >>> my_sorted_list = MyList([1, 1, 1, 1, 1])
 >>> my_sorted_list.print_sorted()
 [1, 1, 1, 1, 1]
+
+>>> my_sorted_list = MyList([10.5, 2.3, 7.7, 5.1])
+>>> my_sorted_list.print_sorted()
+[2.3, 5.1, 7.7, 10.5]
+
+>>> my_sorted_list = MyList([10, 2.3, 7, 5.1])
+>>> my_sorted_list.print_sorted()
+[2.3, 5.1, 7, 10]
+
+>>> my_sorted_list = MyList([3, -2, -7, 5, -1])
+>>> my_sorted_list.print_sorted()
+[-7, -2, -1, 3, 5]
+
+>>> my_sorted_list = MyList(["apple", "banana", "cherry"])
+>>> my_sorted_list.print_sorted()
+['apple', 'banana', 'cherry']
+
+>>> my_sorted_list = MyList([10, "apple", 7, "banana"])
+>>> my_sorted_list.print_sorted()
+# Cela dépendra de la gestion des erreurs dans votre code
+
+>>> my_sorted_list = MyList([i for i in range(1000000, 0, -1)])
+>>> my_sorted_list.print_sorted()
+[1, 2, 3, ..., 999999, 1000000]
+

@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 class MyInt(int):
     """
-    Classe MyInt qui hérite de la classe int, mais avec les opérateurs `==`
-    et `!=` inversés.
+    Classe MyInt qui hérite de la classe int et inverse les opérateurs `==`
+    et `!=` de manière simple.
     """
 
     def __eq__(self, other):
         """Inverser l'opérateur d'égalité"""
-        return not super().__eq__(other)
+        return False if self.real == other else True
 
     def __ne__(self, other):
         """Inverser l'opérateur d'inégalité"""
-        return not super().__ne__(other)
+        return True if self.real == other else False

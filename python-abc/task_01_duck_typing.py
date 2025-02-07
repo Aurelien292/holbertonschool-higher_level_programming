@@ -76,18 +76,14 @@ class Rectangle(Shape):
         return 2 * (self.width + self.height)
 
 
-def shape_info(shape):
-    """
-    Affiche l'aire et le périmètre d'une forme donnée.
+def shape_info(obj):
+    """Function to give shape info"""
 
-    Cette fonction prend un objet shape en entrée, et utilise le duck typing
-    pour appeler ses méthodes `area()` et `perimeter()`. Si ces méthodes
-    sont présentes, leurs résultats seront imprimés. En cas d'absence de ces
-    méthodes, une exception `AttributeError` est levée et ignorée.
+    # Calculating the area and perimeter
+    area = obj.area()
+    perimeter = obj.perimeter()
 
-    Arguments :
-        shape : Un objet ayant les méthodes `area()` et `perimeter()`.
-    """
-    print(f"Area: {shape.area()}")
-    print(f"Perimeter: {shape.perimeter()}")
+    # Printing the area and perimeter
+    print(f"Area: {area}")
+    print(f"Perimeter: {perimeter}")
 

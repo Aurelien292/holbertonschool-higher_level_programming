@@ -83,11 +83,11 @@ def shape_info(shape):
     Cette fonction prend un objet shape en entrée, et utilise le duck typing
     pour appeler ses méthodes `area()` et `perimeter()`. Si ces méthodes
     sont présentes, leurs résultats seront imprimés. En cas d'absence de ces
-    méthodes, une exception `AttributeError` est levée et un message d'erreur
-    est imprimé.
+    méthodes, une exception `AttributeError` est levée et ignorée.
+
+    Arguments :
+        shape : Un objet ayant les méthodes `area()` et `perimeter()`.
     """
-    if not hasattr(shape, 'area') or not hasattr(shape, 'perimeter'):
-        print("Error: The provided object does not have the required methods (area, perimeter).")
-    else:
-        print(f"Area: {shape.area()}")
-        print(f"Perimeter: {shape.perimeter()}")
+    print(f"Area: {shape.area()}")
+    print(f"Perimeter: {shape.perimeter()}")
+

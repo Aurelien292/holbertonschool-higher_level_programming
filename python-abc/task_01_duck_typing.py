@@ -1,78 +1,53 @@
 #!/usr/bin/python3
+"""Module containing Shape class and its inheritances"""
 from abc import ABC, abstractmethod
-import math
+from math import pi
 
 
 class Shape(ABC):
-    """
-    Classe abstraite représentant une forme géométrique.
+    """The Shape class"""
 
-    Cette classe définit les méthodes abstraites `area()` et `perimeter()`,
-    qui doivent être implémentées dans toute sous-classe.
-
-    Méthodes abstraites :
-        area() : Méthode qui doit être définie dans les sous-classes pour
-                 calculer l'aire de la forme.
-        perimeter() : Méthode qui doit être définie dans les sous-classes
-                      pour calculer le périmètre de la forme.
-    """
     @abstractmethod
     def area(self):
+        """Method for area"""
         pass
 
     @abstractmethod
     def perimeter(self):
+        """Method for perimeter"""
         pass
 
 
 class Circle(Shape):
-    """
-    Classe représentant un cercle.
+    """The Circle class inherited from Shape"""
 
-    Hérite de la classe `Shape` et implémente les méthodes `area()` et
-    `perimeter()` pour calculer l'aire et le périmètre d'un cercle.
-
-    Attributs :
-        radius (float) : Le rayon du cercle.
-
-    Méthodes :
-        area() : Calcule l'aire du cercle (π * rayon^2).
-        perimeter() : Calcule le périmètre du cercle (2 * π * rayon).
-    """
     def __init__(self, radius):
-        self.radius = radius
+        """Initialization wih radius"""
+        self.radius = abs(radius)
 
     def area(self):
-        return math.pi * self.radius ** 2
+        """Returning duck area"""
+        return pi * self.radius ** 2
 
     def perimeter(self):
-        return 2 * math.pi * self.radius
+        """Returning perimeter area"""
+        return pi * self.radius * 2
 
 
 class Rectangle(Shape):
-    """
-    Classe représentant un rectangle.
+    """The Rectangle class inherited from Shape"""
 
-    Hérite de la classe `Shape` et implémente les méthodes `area()` et
-    `perimeter()` pour calculer l'aire et le périmètre d'un rectangle.
-
-    Attributs :
-        width (float) : La largeur du rectangle.
-        height (float) : La hauteur du rectangle.
-
-    Méthodes :
-        area() : Calcule l'aire du rectangle (largeur * hauteur).
-        perimeter() : Calcule le périmètre du rectangle
-        (2 * (largeur + hauteur)).
-    """
     def __init__(self, width, height):
+        """Initialization wih width and height"""
         self.width = width
         self.height = height
 
     def area(self):
+        """Returning duck area"""
         return self.width * self.height
 
     def perimeter(self):
+        """Returning perimeter area"""
         return 2 * (self.width + self.height)
 
 

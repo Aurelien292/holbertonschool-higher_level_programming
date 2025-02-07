@@ -86,4 +86,3 @@ def shape_info(obj):
     # Printing the area and perimeter
     print(f"Area: {area}")
     print(f"Perimeter: {perimeter}")
-

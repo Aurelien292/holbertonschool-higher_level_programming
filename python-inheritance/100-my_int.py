@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+    Classe MyInt qui hérite de la classe int
+    """
+
+
 class MyInt(int):
     """
     Classe MyInt qui hérite de la classe int et inverse les opérateurs `==`

@@ -23,9 +23,9 @@ def add_attribute(obj, attr, value):
     if hasattr(obj, '__slots__'):
         raise TypeError("can't add new attribute")
 
-    # Vérifier si l'objet est un type immuable, comme str, int, etc.,
-    # qui ne permet pas l'ajout d'attributs
-    try:
-        setattr(obj, attr, value)
-    except AttributeError:
+    # Vérifier si l'objet est une instance qui supporte l'ajout d'attributs
+    if not hasattr(obj, '__dict__'):
         raise TypeError("can't add new attribute")
+
+    # Si l'objet peut avoir de nouveaux attributs, on les ajoute
+    obj.__dict__[attr] = value

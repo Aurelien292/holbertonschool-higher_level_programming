@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-
-import sys
 """
 Ajoute les arguments de la ligne de commande dans un fichier JSON.
 """
+import sys
 
 
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file

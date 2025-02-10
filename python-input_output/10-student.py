@@ -1,64 +1,69 @@
 #!/usr/bin/python3
-"""
-    Classe qui définit un étudiant avec son prénom, son nom et son âge.
-    """
+"""Module contenant la classe Student"""
 
 
 class Student:
-    """
-    Classe qui définit un étudiant avec son prénom, son nom et son âge.
+    """La classe Student représente un étudiant avec des informations
+    personnelles.
 
-    Attributs publics:
-        first_name (str): Le prénom de l'élève.
-        last_name (str): Le nom de famille de l'élève.
-        age (int): L'âge de l'élève.
+    Attributs :
+        first_name (str) : Le prénom de l'étudiant.
+        last_name (str) : Le nom de famille de l'étudiant.
+        age (int) : L'âge de l'étudiant.
 
-    Méthodes publiques:
-        to_json(attrs=None): Retourne un dictionnaire représentant
-        l'objet Student.
+    Méthodes :
+        to_json(attrs=None) : Retourne une représentation sous forme
+        de dictionnaire de l'objet Student.
     """
 
     def __init__(self, first_name, last_name, age):
-        """
-        Initialisation d'un étudiant avec son prénom, son nom et son âge.
+        """Initialise une instance de la classe Student avec le
+        prénom, le nom et l'âge fournis.
 
-        Args:
-            first_name (str): Le prénom de l'élève.
-            last_name (str): Le nom de famille de l'élève.
-            age (int): L'âge de l'élève.
+        Args :
+            first_name (str) : Le prénom de l'étudiant.
+            last_name (str) : Le nom de famille de l'étudiant.
+            age (int) : L'âge de l'étudiant.
         """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
+        """Retourne une représentation sous forme de dictionnaire de
+        l'objet Student.
+
+        Si `attrs` est une liste de chaînes de caractères, seuls les
+        attributs dont le nom est présent dans
+        la liste `attrs` seront inclus dans le dictionnaire retourné.
+        Si `attrs` n'est pas fourni, ou si ce n'est
+        pas une liste de chaînes, tous les attributs de l'objet seront
+        inclus dans le dictionnaire.
+
+        Args :
+            attrs (list, optionnel) : Une liste de noms d'attributs
+            (chaînes de caractères) à inclure dans le
+                                      dictionnaire retourné. Si `None`,
+                                      tous les attributs de l'objet Student
+                                      seront retournés.
+
+        Retourne :
+            dict : Un dictionnaire représentant l'objet Student, contenant
+            uniquement les attributs spécifiés
+                   dans `attrs`, ou tous les attributs si `attrs` est `None`.
+
+        Exemple :
+            student = Student("John", "Doe", 25)
+            student.to_json() => {'first_name': 'John', 'last_name': 'Doe',
+            'age': 25}
+            student.to_json(["first_name", "age"]) => {'first_name': 'John',
+            'age': 25}
         """
-        Retourne un dictionnaire contenant les attributs de l'objet Student.
-
-        Si `attrs` est fourni, seuls les attributs mentionnés dans la liste
-        `attrs` seront récupérés. Si `attrs` est `None`, tous les attributs
-        de l'objet sont retournés.
-
-        Args:
-            attrs (list, optional): Liste des noms d'attributs à récupérer.
-                                     Par défaut, None.
-
-        Returns:
-            dict: Un dictionnaire représentant l'objet Student
-            avec les attributs
-                  spécifiés dans `attrs`, ou tous les attributs
-                  si `attrs` est None.
-        """
-        json_dict = {}
-
-        # Si attrs est fourni, ne récupérer que les attributs demandés
-        if attrs:
-            for attr in attrs:
-                if hasattr(self, attr):
-                    json_dict[attr] = getattr(self, attr)
-        else:
-            # Sinon, récupérer tous les attributs d'instance
-            json_dict = vars(self)
-            # Utilisation de vars() pour accéder aux attributs d'instance
-
-        return json_dict
+        if isinstance(attrs, list) and all(isinstance(element, str) for
+                                           element in attrs):
+            new_dict = dict()
+            for i in attrs:
+                if i in self.__dict__:
+                    new_dict[i] = self.__dict__[i]
+            return new_dict
+        return self.__dict__

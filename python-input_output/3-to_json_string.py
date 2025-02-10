@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import json
 """
     Convertit un objet Python en chaîne JSON.
     """
+import json
 
 
 def to_json_string(my_obj):

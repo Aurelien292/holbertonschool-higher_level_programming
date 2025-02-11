@@ -1,9 +1,16 @@
-#!/usr/bin/putyhon3
+#!/usr/bin/python3
+"""
+Fonction qui retourne un triangle pascal
+"""
+
 
 def pascal_triangle(n):
     # Si n <= 0, on retourne une liste vide
     if n <= 0:
         return []
+    """
+Retourne une liste vide si ( n )  est plus petit ou égale à 0
+"""
 
     # Initialisation du triangle avec la première ligne
     triangle = [[1]]
@@ -19,5 +26,8 @@ def pascal_triangle(n):
         row.append(1)
         # On ajoute la ligne au triangle
         triangle.append(row)
+        """
+Retourne list int pour representé un triangle Pascal
+"""
 
     return triangle

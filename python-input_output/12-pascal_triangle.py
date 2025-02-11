@@ -29,5 +29,4 @@ Retourne une liste vide si ( n )  est plus petit ou égale à 0
         """
 Retourne list int pour representé un triangle Pascal
 """
-
     return triangle

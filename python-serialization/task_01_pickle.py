@@ -1,53 +1,40 @@
 #!/usr/bin/python3
-import pickle
+"""Module containing pickle module and CustomObject"""
+
 
 class CustomObject:
-    def __init__(self, name, age, is_student):
+    """The CustomObject class"""
+
+    def __init__(self, name: str, age: int, is_student: bool):
+        """Initialization of instance"""
         self.name = name
         self.age = age
         self.is_student = is_student
 
     def display(self):
-        """Affiche les attributs de l'objet avec un format lisible"""
-        print(f"Name: {self.name}")
-        print(f"Age: {self.age}")
-        print(f"Is Student: {self.is_student}")
+        """Function to print attributes"""
+        print(f"Name: {self.name}\nAge: {self.age}\nIs Student: {self.is_student}")
 
     def serialize(self, filename):
-        """Sérialise l'objet courant et le sauvegarde dans un fichier"""
+        """Method to serialize the Object and write it to the file"""
+        import pickle
+
         try:
+            # Writing serialized data to the file
             with open(filename, 'wb') as file:
                 pickle.dump(self, file)
-            print(f"Object serialized to {filename}")
         except Exception as e:
-            print(f"Error during serialization: {e}")
-            return None
+            print("Error occurred:", e)
 
     @classmethod
     def deserialize(cls, filename):
-        """Charge un objet sérialisé depuis un fichier et le renvoie"""
-        try:
-            with open(filename, 'rb') as file:
-                obj = pickle.load(file)
-            return obj
-        except (FileNotFoundError, pickle.UnpicklingError) as e:
-            print(f"Error during deserialization: {e}")
-            return None
+        """Method to deserialize the Object from file"""
+        import pickle
 
-# Exemple d'utilisation
-if __name__ == "__main__":
-    # Création d'un objet CustomObject
-    person = CustomObject("John", 25, True)
-    
-    # Affichage des attributs de l'objet
-    person.display()
-    
-    # Sérialisation de l'objet dans un fichier
-    person.serialize("person.pkl")
-    
-    # Désérialisation de l'objet depuis le fichier
-    loaded_person = CustomObject.deserialize("person.pkl")
-    
-    # Si la désérialisation a réussi, on affiche les attributs de l'objet chargé
-    if loaded_person:
-        loaded_person.display()
+        try:
+            # Reading file content for deserialization
+            with open(filename, 'rb') as file:
+                return pickle.load(file)
+        except Exception as e:
+            print("Error occurred:", e)
+            return None

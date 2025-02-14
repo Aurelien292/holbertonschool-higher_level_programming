@@ -1,43 +1,51 @@
 Fonction qui retourne un triangle de Pascal.
+
 >>> pascal_triangle = __import__('12-pascal_triangle').pascal_triangle
 
+#Test de la fonction pascal_triangle avec 0
 >>> pascal_triangle(0)
 []
 
+#Test de la fonction pascal_triangle avec 1
 >>> pascal_triangle(1)
 [[1]]
 
+#Test de la fonction pascal_triangle avec 2
 >>> pascal_triangle(2)
 [[1], [1, 1]]
 
+#Test de la fonction pascal_triangle avec 3
 >>> pascal_triangle(3)
 [[1], [1, 1], [1, 2, 1]]
 
+#Test de la fonction pascal_triangle avec 4
 >>> pascal_triangle(4)
 [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
 
+#Test de la fonction pascal_triangle avec 5
 >>> pascal_triangle(5)
 [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
 
+#Test de la fonction pascal_triangle avec 6
 >>> pascal_triangle(6)
 [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1]]
 
+#Test de la fonction pascal_triangle avec 7
 >>> pascal_triangle(7)
 [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1], [1, 6, 15, 20, 15, 6, 1]]
 
+#Test de la fonction pascal_triangle avec 8
 >>> pascal_triangle(8)
 [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1], [1, 6, 15, 20, 15, 6, 1], [1, 7, 21, 35, 35, 21, 7, 1]]
 
+#Test de la fonction pascal_triangle avec 9
 >>> pascal_triangle(9)
 [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1], [1, 6, 15, 20, 15, 6, 1], [1, 7, 21, 35, 35, 21, 7, 1], [1, 8, 28, 56, 70, 56, 28, 8, 1]]
 
-# Cas de valeurs négatives
+#Test de la fonction pascal_triangle avec valeur negative
 >>> pascal_triangle(-1)
 []
 
+#Test de la fonction pascal_triangle avec valeur negative
 >>> pascal_triangle(-5)
-[]
-
-# Cas avec n = 0 ou des entrées invalides
->>> pascal_triangle(0)
 []

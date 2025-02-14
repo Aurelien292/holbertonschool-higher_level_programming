@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as ET
+from xml.dom import minidom
 
 def serialize_to_xml(dictionary, filename):
     """Sérialise un dictionnaire Python en XML et l'enregistre dans un fichier."""
@@ -11,10 +12,26 @@ def serialize_to_xml(dictionary, filename):
             child = ET.SubElement(root, key)
             child.text = str(value)  # Convertir la valeur en chaîne de caractères
         
-        # Créer un arbre XML et l'écrire dans le fichier
+        # Créer un arbre XML
         tree = ET.ElementTree(root)
-        tree.write(filename)
         
+        # Utiliser la méthode write avec un joli format (indentation)
+        # Pour ajouter des indentations et des sauts de ligne dans le fichier
+        with open(filename, "wb") as xml_file:
+            tree.write(xml_file)
+        
+        # Lire le fichier pour ajouter une indentation
+        with open(filename, "r") as file:
+            xml_string = file.read()
+
+        # Utiliser un processus manuel pour appliquer l'indentation
+        # Transformer l'arbre XML en chaîne de caractères avec un joli format
+        formatted_xml = minidom.parseString(xml_string).toprettyxml(indent="    ")
+
+        # Réécrire le fichier avec un joli format
+        with open(filename, "w") as xml_file:
+            xml_file.write(formatted_xml)
+
         print(f"Données sérialisées dans le fichier {filename}")
         return True
     except Exception as e:
@@ -47,8 +64,7 @@ def deserialize_from_xml(filename):
                 
             # Ajouter au dictionnaire
             dictionary[key] = value
-        
-        print(f"Données désérialisées depuis le fichier {filename}")
+
         return dictionary
     except Exception as e:
         print(f"Erreur lors de la désérialisation : {e}")

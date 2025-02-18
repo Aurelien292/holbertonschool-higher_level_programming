@@ -70,3 +70,19 @@ Voici un exemple de réponse (donnée JSON) :
 * __title__ : Le titre de la publication. C’est un texte qui décrit le sujet du post (ici : "Holberton est Cool").
 
 * __body__ : Le contenu du post. C'est un texte plus long qui représente le message ou le contenu de la publication (ici, il y a une description avec plusieurs lignes).
+
+### Conseils :
+
+* L’option -I dans curl permet de récupérer uniquement les en-têtes de la réponse, ce qui peut être utile pour diagnostiquer des paramètres du serveur (type de contenu, contrôle de cache, etc.).
+```
+curl -I https://jsonplaceholder.typicode.com/posts
+```
+* L’option -X vous permet de spécifier une méthode HTTP pour votre requête. Par exemple, -X POST pour faire une requête POST.
+```
+curl -X POST https://jsonplaceholder.typicode.com/posts 
+```
+* L’option -d permet de transmettre des données dans votre requête, ce qui est couramment utilisé avec les requêtes POST, PUT ou PATCH pour envoyer des données au serveur.Créer un titre avec le body , l'user et l'Id .
+
+```
+curl -X POST -d "title=foo&body=bar&userId=1" https://jsonplaceholder.typicode.com/posts
+```

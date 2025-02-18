@@ -120,4 +120,4 @@ Les codes de statut HTTP sont des réponses envoyées par le serveur pour indiqu
 
 ## Représentation de la structure d'une demande et d'une réponse HTTP.
 
-   ![alt text](ComHTTP.png)
+   ![alt text](IMG_README/ComHTTP.png)

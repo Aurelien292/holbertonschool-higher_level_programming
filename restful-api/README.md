@@ -1,4 +1,4 @@
-![alt text](HTTPS.jpeg)
+![alt text](IMG_README/HTTPS.jpeg)
 
 
 # Guide sur HTTP, HTTPS et Méthodes HTTP
@@ -18,7 +18,7 @@ Rechargez la page et observez la première demande. Cliquez dessus. Explorer la 
 
 ### Exemple et explication : 
 
-![alt text](entete.png)
+![alt text](IMG_README/entete.png)
 
 #### Dans cet exemple, un navigateur a effectué une requête GET vers https://intranet.hbtn.io/projects/2123
 
@@ -34,7 +34,7 @@ __Transfert 17,01 Ko (taille 118,72 Ko) :__ Cela indique la quantité de donnée
 
 #### Vue d'une inspection réseau :
 
-![alt text](methode.png)
+![alt text](IMG_README/methode.png)
 
 
 *__Liste de méthodes HTTP Courantes :__*
@@ -79,7 +79,7 @@ Les méthodes HTTP permettent de spécifier l’action que le client souhaite ef
 #### Liste des Codes de Statut HTTP Courants :
 
 
-![alt text](StatusCode.png)
+![alt text](IMG_README/StatusCode.png)
 
 
 *__Exemple de status code et fonctions :__*

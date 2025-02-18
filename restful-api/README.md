@@ -18,6 +18,8 @@ Rechargez la page et observez la première demande. Cliquez dessus. Explorer la 
 
 ### Exemple et explication : 
 
+![alt text](entete.png)
+
 #### Dans cet exemple, un navigateur a effectué une requête GET vers https://intranet.hbtn.io/projects/2123
 
 __Type de demande sur la page :__ GET est la méthode HTTP utilisée pour demander une ressource à un serveur

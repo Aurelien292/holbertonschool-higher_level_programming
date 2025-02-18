@@ -86,3 +86,21 @@ curl -X POST https://jsonplaceholder.typicode.com/posts
 ```
 curl -X POST -d "title=foo&body=bar&userId=1" https://jsonplaceholder.typicode.com/posts
 ```
+
+### Easter egg :
+
+* Cette commande renverra l'adresse IP publique de la machine que tu utilises pour exécuter la requête 
+
+```
+curl https://httpbin.org/ip
+```
+
+* Cette commande te renverra une adresse !Ensuite copier le lien de l'image et l'ouvrir dans un navigateur pour voir un joli chien !
+
+```
+curl https://dog.ceo/api/breeds/image/random
+```
+* Cette commande va afficher la météo de manière un peu stylisée
+```
+curl -s https://wttr.in/Paris
+```

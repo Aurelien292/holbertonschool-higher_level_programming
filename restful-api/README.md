@@ -45,25 +45,33 @@ Les méthodes HTTP permettent de spécifier l’action que le client souhaite ef
 1. __GET :__
 
     Utilisation : Cette méthode est utilisée pour récupérer des données du serveur sans les modifier.
+   
     Exemple : Récupérer une page web ou les informations d'un utilisateur via une API.
+   
     Scénario : Un utilisateur qui charge une page web dans son navigateur.
 
-2. __POST :__
+3. __POST :__
 
     Utilisation : Cette méthode est utilisée pour envoyer des données au serveur, généralement pour créer une nouvelle ressource.
+   
     Exemple : Soumettre un formulaire d'inscription sur un site web.
+   
     Scénario : Un utilisateur qui envoie un formulaire pour s'inscrire à un service.
 
-3. __PUT :__
+5. __PUT :__
 
     Utilisation : Cette méthode est utilisée pour mettre à jour une ressource existante sur le serveur, en remplaçant la ressource précédente.
+   
     Exemple : Mettre à jour les informations d'un utilisateur dans une base de données.
+   
     Scénario : Un utilisateur qui modifie son profil sur un site web.
 
-4. __DELETE :__
+7. __DELETE :__
 
     Utilisation : Cette méthode est utilisée pour supprimer une ressource du serveur.
+   
     Exemple : Supprimer un article de blog ou un utilisateur dans une base de données.
+   
     Scénario : Un administrateur qui supprime un compte utilisateur sur une plateforme.
 
 ## Explorer les codes de statut HTTP:
@@ -82,24 +90,29 @@ Les codes de statut HTTP sont des réponses envoyées par le serveur pour indiqu
 1. __200 OK :__
 
     Description : La requête a été traitée avec succès.
+   
     Scénario : Un utilisateur accède à une page web sans erreur.
 
-2. __404 Not Found :__
+3. __404 Not Found :__
 
     Description : La ressource demandée n'a pas été trouvée sur le serveur.
+   
     Scénario : Un utilisateur tente d'accéder à une page qui n'existe plus ou a été supprimée.
 
-3. __500 Internal Server Error :__
+5. __500 Internal Server Error :__
 
     Description : Une erreur s'est produite sur le serveur, empêchant le traitement de la requête.
+   
     Scénario : Le serveur rencontre un problème lors du traitement d'une demande (par exemple, une erreur dans le code ou une défaillance temporaire).
 
-4. __301 Moved Permanently :__
+7. __301 Moved Permanently :__
 
     Description : La ressource demandée a été déplacée de manière permanente vers une nouvelle URL.
+   
     Scénario : Un site web a changé de domaine ou a déplacé une page vers une autre adresse.
 
-5. __403 Forbidden :__
+9. __403 Forbidden :__
 
     Description : L'accès à la ressource est interdit, même si la requête est correcte.
+   
     Scénario : Un utilisateur tente d'accéder à une page ou une ressource à laquelle il n'a pas les permissions nécessaires, comme un fichier protégé par mot de passe.

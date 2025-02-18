@@ -116,3 +116,8 @@ Les codes de statut HTTP sont des réponses envoyées par le serveur pour indiqu
     Description : L'accès à la ressource est interdit, même si la requête est correcte.
    
     Scénario : Un utilisateur tente d'accéder à une page ou une ressource à laquelle il n'a pas les permissions nécessaires, comme un fichier protégé par mot de passe.
+
+
+## Représentation de la structure d'une demande et d'une réponse HTTP.
+
+   ![alt text](ComHTTP.png)

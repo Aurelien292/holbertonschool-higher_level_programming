@@ -38,11 +38,13 @@ def add_user():
         return jsonify({"error": "Username is required"}), 400
 
     users[data['username']] = {
-        "username": data['username'], "name": data['name'],
-        "age": data['age'], "city": data['city']
+        "username": data['username'],
+        "name": data['name'],
+        "age": data['age'],
+        "city": data['city']
     }
 
-    return jsonify({"message": "User added", "user": users[data['username']]})
+    return jsonify({"message": "User added", "user": users[data['username']]}), 201
 
 
 if __name__ == "__main__":

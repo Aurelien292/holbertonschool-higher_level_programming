@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 
@@ -36,10 +34,10 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
             self.wfile.write(b"404 not found")
 
 
-def run(server_class=HTTPServer, handler_class=SimpleAPIHandler, port=8000):
-    server_adress = ('', port)
+def run(server_class=HTTPServer, handler_class=SimpleAPIHandler):
+    server_adress = ('', 8000)
     httpd = server_class(server_adress, handler_class)
-    print(f"Server running on port {port}...")
+    print(f"Server running on port {8000}...")
     httpd.serve_forever
 
 

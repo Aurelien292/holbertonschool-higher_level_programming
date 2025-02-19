@@ -1,4 +1,4 @@
-![alt text](Curl.png)
+![alt text](IMGcurl/Curl.png)
 
 # Guide sur cURL
 
@@ -34,7 +34,7 @@ Cela affichera des informations sur la version de curl installée, ainsi que les
 
 #### _Exemple de rendu_ :
 
-![alt text](versio_CURL.png)
+![alt text](IMGcurl/versio_CURL.png)
 
 * *__Interaction basique avec une page web__*  :
 

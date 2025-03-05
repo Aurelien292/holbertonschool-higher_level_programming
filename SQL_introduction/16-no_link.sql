@@ -1,3 +1,4 @@
+-- script lists records
 USE hbtn_0c_0;
 
 SELECT score, name

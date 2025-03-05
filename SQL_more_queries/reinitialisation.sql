@@ -1,0 +1,1 @@
+ALTER TABLE id_not_null AUTO_INCREMENT = 1;

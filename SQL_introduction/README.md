@@ -1,4 +1,4 @@
-![Banniere](SQL.png)
+![Banniere](SQL.jpg)
 # Qu'est-ce que SQL ?
 
 SQL (Structured Query Language) est un langage utilisé pour interagir avec des bases de données relationnelles. SQL permet de créer, modifier, interroger et gérer les données dans une base de données.

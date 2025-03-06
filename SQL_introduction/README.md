@@ -39,7 +39,7 @@ __*DELETE*__ : Supprime des données d'une table.
 
     DELETE FROM Clients WHERE client_id = 1;
 
->>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+--------------------------------------------------------
 
 ### 1. Création d'une base de données
 
@@ -96,7 +96,7 @@ USE hbtn_0c_0;
 ```
 Cela permet de commencer à interagir avec la base hbtn_0c_0.
 
->>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<>>>>>>>>>
+---------------------------------------------------------------------------
 ## *Données relationnelles*
 
 ###  1. Bases de données relationnelles

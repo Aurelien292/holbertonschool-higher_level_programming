@@ -278,3 +278,7 @@ Ce document couvre les commandes SQL de base nécessaires pour interagir avec un
 Conclusion
 
 SQL est un langage puissant pour manipuler et interroger les données dans des bases de données relationnelles. Il permet de gérer les données efficacement, tout en garantissant l'intégrité des données grâce aux concepts de tables, clés primaires et étrangères. Les commandes SQL peuvent être utilisées pour créer des structures de données, interroger des informations, et contrôler l'accès aux données.
+
+# Commandes SQL : 
+
+![Banniere](CHEAT.png)

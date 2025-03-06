@@ -86,6 +86,8 @@ Privilèges globaux : Si vous utilisez * . *, cela signifie que vous appliquez l
 GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';
 ```
 Cela donne à l'utilisateur admin tous les privilèges sur toutes les bases de données et tables du serveur MySQL.
+
+![Banniere](bandeau.png)
 ##  Importation d'un dump de base de données dans MySQL
 
 L'importation d'un dump de base de données dans MySQL consiste à charger un fichier contenant les instructions SQL (généralement un fichier .sql) nécessaires à la création des tables, à l'insertion des données, et éventuellement à la création des utilisateurs ou à l'attribution de privilèges.
@@ -145,7 +147,7 @@ Vous avez une table Table_Child avec une colonne __parent_id__ qui est la clé �
 
 La contrainte de clé étrangère __fk_parent__ garantit que la colonne *__parent_id__* dans *__Table_Child__* fait référence à une valeur existante dans la colonne id de __Table_Parent__, ce qui permet de maintenir l'intégrité des données entre les deux tables.
 
-
+![Banniere](bandeau.png)
 ## JOIN : L'Alliance Parfaite des Tables pour des Résultats Précis !
 
 JOIN est une opération SQL utilisée pour combiner les lignes de deux ou plusieurs tables, en fonction d'une condition de correspondance. Cela permet de récupérer des données provenant de différentes tables et de les afficher sous une forme combinée.

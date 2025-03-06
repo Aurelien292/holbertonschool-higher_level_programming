@@ -48,7 +48,7 @@ __*DELETE*__ : Supprime des données d'une table.
     DELETE FROM Clients WHERE client_id = 1;
 
 --------------------------------------------------------
-# *Gestion base de données*
+## *Gestion base de données*
 
 ### 1. Création d'une base de données
 

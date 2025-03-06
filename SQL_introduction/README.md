@@ -1,4 +1,12 @@
 ![Banniere](SQL.jpg)
+
+## Table of Contents
+1. [Qu'est-ce que SQL ?](#SQL)
+2. [Gestion base de données](#Base_de_données)
+3. [Données relationnelles](#Données_relationnelles)
+4. [Concepts clés](#Concepts_clés)
+5. [Commandes SQL](#Commandes_SQL)
+
 # Qu'est-ce que SQL ?
 
 SQL (Structured Query Language) est un langage utilisé pour interagir avec des bases de données relationnelles. SQL permet de créer, modifier, interroger et gérer les données dans une base de données.
@@ -40,6 +48,7 @@ __*DELETE*__ : Supprime des données d'une table.
     DELETE FROM Clients WHERE client_id = 1;
 
 --------------------------------------------------------
+# Gestion base de données
 
 ### 1. Création d'une base de données
 

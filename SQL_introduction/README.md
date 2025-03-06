@@ -2,10 +2,10 @@
 
 ## Table of Contents
 1. [Qu'est-ce que SQL ?](#SQL)
-2. [Gestion base de données](#Base_de_données)
-3. [Données relationnelles](#Données_relationnelles)
-4. [Concepts clés](#Concepts_clés)
-5. [Commandes SQL](#Commandes_SQL)
+2. [Gestion base de données](#Base-de-données)
+3. [Données relationnelles](#Données-relationnelles)
+4. [Concepts clés](#Concepts-clés)
+5. [Commandes SQL](#Commandes-SQL)
 
 # Qu'est-ce que SQL ?
 

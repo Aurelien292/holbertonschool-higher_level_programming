@@ -109,7 +109,7 @@ Une fois l'importation terminée, vous pouvez vérifier que la base de données 
 mysql -u root -p
 SHOW DATABASES;
 ```
-
+![Banniere](bandeau.png)
 ## SQL : Quand les Tables Trouvent l'Amour et Se Lient pour Toujours !
 
 Dans l'univers de SQL, les tables sont comme des entités indépendantes, mais parfois, elles doivent se connecter, s'associer et collaborer. Grâce aux clés étrangères et aux relations entre tables, les bases de données deviennent des systèmes interconnectés.

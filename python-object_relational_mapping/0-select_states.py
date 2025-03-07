@@ -1,41 +1,30 @@
 #!/usr/bin/python3
 """
-    Script qui répertorie tous les états de la base de données.
-    Ce script récupère les états triés par ID et les affiche
-    dans le format demandé.
+    Script that lists all states from the database.
 """
 import MySQLdb
 import sys
 
 
-def connectBDD(user, password, db):
+def connectDb(user, password, db):
     """
-    Établit une connexion à la base de données MySQL.
-
-    Cette fonction permet de se connecter à une base de données MySQL
-    en utilisant les informations d'identification fournies (utilisateur,
-    mot de passe et nom de la base de données).
-
-    Args:
-        user (str): Le nom d'utilisateur pour se connecter à la base
-        de données.
-        password (str): Le mot de passe associé à l'utilisateur.
-        db (str): Le nom de la base de données à laquelle se connecter.
-
-    Returns:
-        MySQLdb.connect: Un objet de connexion à la base de données MySQL.
+        Get connection with the database.
+        Args:
+            user (str): Username of the user.
+            password (str): Password of the user.
+            db (str): Database to retrieve.
+        Return:
+            Connection database.
     """
-    connect = MySQLdb.connect(
+    conn = MySQLdb.connect(
         host="localhost",
-        user=user,
-        password=password,
-        db=db,
         port=3306,
+        user=user,
+        passwd=password,
+        db=db,
         charset="utf8"
     )
-    return connect
-
-# Récupère les arguments passés en ligne de commande
+    return conn
 
 
 if __name__ == "__main__":
@@ -43,19 +32,11 @@ if __name__ == "__main__":
     password = sys.argv[2]
     db = sys.argv[3]
 
-    # Connexion à la base de données
-    connect = connectBDD(user, password, db)
-
-    # Crée un curseur pour exécuter la requête SQL
-    cursor = connect.cursor()
-
-    # Exécute la requête SQL pour récupérer tous les états triés par ID
-    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
-
-    # Récupère et affiche toutes les lignes de la requête
-    for ligne in cursor.fetchall():
-        print(f"{ligne[0]}: {ligne[1]}")
-
-    # Ferme le curseur et la connexion à la base de données
-    cursor.close()
-    connect.close()
+    conn = connectDb(user, password, db)
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
+    query_rows = cur.fetchall()
+    for row in query_rows:
+        print(row)
+    cur.close()
+    conn.close()

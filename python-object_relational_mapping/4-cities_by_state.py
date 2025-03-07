@@ -6,7 +6,7 @@ import MySQLdb
 import sys
 
 
-def connectBDD(user, password, BDD_name):
+def connectBDD(user, password, db):
     """
     Établit une connexion à la base de données MySQL.
 
@@ -27,7 +27,7 @@ def connectBDD(user, password, BDD_name):
         host="localhost",
         user=user,
         password=password,
-        db=BDD_name,
+        db=db,
         port=3306,
         charset="utf8"
     )
@@ -39,10 +39,10 @@ def connectBDD(user, password, BDD_name):
 if __name__ == "__main__":
     user = sys.argv[1]
     password = sys.argv[2]
-    BDD_name = sys.argv[3]
+    db = sys.argv[3]
     
 
-connect = connectBDD(user, password, BDD_name)
+connect = connectBDD(user, password, db)
 # Crée un curseur pour exécuter la requête SQL
 cursor = connect.cursor()
 

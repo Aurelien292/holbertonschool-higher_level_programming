@@ -18,7 +18,7 @@ def connectBDD(user, password, db):
         user (str): Le nom d'utilisateur pour se connecter à la base
         de données.
         password (str): Le mot de passe associé à l'utilisateur.
-        BDD_name (str): Le nom de la base de données à laquelle se connecter.
+        db (str): Le nom de la base de données à laquelle se connecter.
 
     Returns:
         MySQLdb.connect: Un objet de connexion à la base de données MySQL.

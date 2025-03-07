@@ -1,1 +1,1 @@
-DESCRIBE first_table;
+DESCRIBE id_not_null;

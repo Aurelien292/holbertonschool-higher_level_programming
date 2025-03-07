@@ -1,0 +1,1 @@
+SHOW CREATE TABLE id_not_null;

@@ -1,1 +1,1 @@
-DELETE FROM second_table
+DELETE FROM id_not_null

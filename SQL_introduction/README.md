@@ -1,12 +1,54 @@
 ![Banniere](SQL.jpg)
 
 ## Table of Contents
+0. [Qu'est-ce que Mysql ?](#MySQL)
 1. [Qu'est-ce que SQL ?](#SQL)
 2. [Gestion base de données](#Base-de-données)
 3. [Données relationnelles](#Données-relationnelles)
 4. [Concepts clés](#Concepts-clés)
 5. [Commandes SQL](#Commandes-SQL)
+# *Qu'est-ce que MySQL* ?
+MySQL est un système de gestion de base de données relationnelle (SGBDR) open-source , utilisé pour stocker et gérer des données sous forme de tables structurées.
 
+## Installation 
+
+### Installation sur Linux (Debian/Ubuntu)
+
+```
+sudo apt update
+sudo apt install mysql-server
+```
+### Vérification de l’installation
+
+Après l’installation, vous pouvez vérifier que MySQL fonctionne correctement en exécutant la commande suivante :
+
+```
+mysql --version
+```
+Cela devrait afficher la version de MySQL installée.
+
+### Démarrer le service MySQL Server
+Démarrage du service MySQL :
+```
+service mysql start
+```
+### Status du service MySQL Server
+```
+service mysql status
+```
+
+### Lancement du service MySQL Server
+```
+mysql -uroot
+```
+### Quitter le service MySQL Server
+Une fois le service lancé utiliser la commande "quit" .
+
+__resultat attendu__ :
+```
+mysql> quit
+Bye
+```
 # *Qu'est-ce que SQL* ?
 
 SQL (Structured Query Language) est un langage utilisé pour interagir avec des bases de données relationnelles. SQL permet de créer, modifier, interroger et gérer les données dans une base de données.

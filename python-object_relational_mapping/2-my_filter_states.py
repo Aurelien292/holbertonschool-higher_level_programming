@@ -1,60 +1,31 @@
 #!/usr/bin/python3
 """
-Script qui répertorie tous les états en annonçant un argument 
-de selection.
+    script that takes in an argument and displays all values in the states
+    table of hbtn_0e_0_usa where name matches the argument
 """
-import MySQLdb
+
 import sys
-
-
-def connectBDD(user, password, BDD_name):
-    """
-    Établit une connexion à la base de données MySQL.
-
-    Cette fonction permet de se connecter à une base de données MySQL
-    en utilisant les informations d'identification fournies (utilisateur,
-    mot de passe et nom de la base de données).
-
-    Args:
-        user (str): Le nom d'utilisateur pour se connecter
-        à la base de données.
-        password (str): Le mot de passe associé à l'utilisateur.
-        BDD_name (str): Le nom de la base de données à laquelle se connecter.
-
-    Returns:
-        MySQLdb.connect: Un objet de connexion à la base de données MySQL.
-    """
-    connect = MySQLdb.connect(
-        host="localhost",
-        user=user,
-        password=password,
-        db=BDD_name,
-        port=3306,
-        charset="utf8"
-    )
-    return connect
-
-# Récupère les arguments passés en ligne de commande
+import MySQLdb
 
 
 if __name__ == "__main__":
-    user = sys.argv[1]
-    password = sys.argv[2]
-    BDD_name = sys.argv[3]
 
-connect = connectBDD(user, password, BDD_name)
-# Crée un curseur pour exécuter la requête SQL
-cursor = connect.cursor()
-# Exécute la requête SQL pour récupérer les états dont le nom correspond à
-# l'argument passé
-# Ajout de la virgule , pour que cela soit traité comme un tuple, même si tu
-# passes un seul argument.
-cursor.execute("SELECT * FROM states WHERE name = BINARY '{}'\
-    ORDER BY states.id ASC".format(sys.argv[4],))
-# Récupère et affiche toutes les lignes de la requête
-ligne_requete = cursor.fetchall()
-for ligne in ligne_requete:
-    print(ligne)
-# Ferme le curseur et la connexion à la base de données
-cursor.close()
-connect.close()
+    db = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        database=sys.argv[3]
+    )
+
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM states WHERE name = BINARY '{}'\
+                    ORDER BY id ASC".format(sys.argv[4]))
+
+    rows = cursor.fetchall()
+
+    for row in rows:
+        print(row)
+
+    cursor.close()
+    db.close()

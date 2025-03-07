@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
-Script qui répertorie tous les états de la base de données.
+    Script qui répertorie tous les états de la base de données.
+    Ce script récupère les états triés par ID et les affiche
+    dans le format demandé.
 """
 import MySQLdb
 import sys
@@ -41,14 +43,19 @@ if __name__ == "__main__":
     password = sys.argv[2]
     db = sys.argv[3]
 
-connect = connectBDD(user, password, db)
-# Crée un curseur pour exécuter la requête SQL
-cursor = connect.cursor()
-cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
-# Récupère et affiche toutes les lignes de la requête
-ligne_requete = cursor.fetchall()
-for ligne in ligne_requete:
-    print(ligne)
-# Ferme le curseur et la connexion à la base de données
-cursor.close()
-connect.close()
+    # Connexion à la base de données
+    connect = connectBDD(user, password, db)
+
+    # Crée un curseur pour exécuter la requête SQL
+    cursor = connect.cursor()
+
+    # Exécute la requête SQL pour récupérer tous les états triés par ID
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
+
+    # Récupère et affiche toutes les lignes de la requête
+    for ligne in cursor.fetchall():
+        print(f"{ligne[0]}: {ligne[1]}")
+
+    # Ferme le curseur et la connexion à la base de données
+    cursor.close()
+    connect.close()

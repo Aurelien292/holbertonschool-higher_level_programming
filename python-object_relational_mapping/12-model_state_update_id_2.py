@@ -12,7 +12,8 @@ from sqlalchemy.orm import Session
 if __name__ == "__main__":
     # Vérification du nombre d'arguments
     if len(sys.argv) < 4:
-        print("Usage: ./change_state.py <mysql_user> <mysql_password> <database_name>")
+        print("Usage: ./change_state.py <mysql_user>\
+            <mysql_password> <database_name>")
         sys.exit(1)
 
     # Récupération des arguments depuis la ligne de commande
@@ -22,8 +23,11 @@ if __name__ == "__main__":
 
     # Création de la chaîne de connexion à la base de données
     engine = create_engine(
-        f'mysql+mysqldb://{mysql_user}:{mysql_password}@localhost/{database_name}',  # Chaîne de connexion dynamique
-        pool_pre_ping=True  # Vérifie la validité de la connexion avant chaque requête
+        # Chaîne de connexion dynamique
+        f'mysql+mysqldb://{mysql_user}:{mysql_password}\
+            @localhost/{database_name}',
+        # Vérifie la validité de la connexion avant chaque requête
+        pool_pre_ping=True
     )
 
     # Crée les tables si elles n'existent pas

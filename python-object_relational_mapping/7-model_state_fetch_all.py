@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session
 
 
 if __name__ == "__main__":
-     # Récupérer les arguments passés en ligne de commande
+    # Récupérer les arguments passés en ligne de commande
     args = {
         'user': sys.argv[1],
         'password': sys.argv[2],
@@ -21,11 +21,11 @@ if __name__ == "__main__":
         pool_pre_ping=True
     )
     Base.metadata.create_all(engine)
-	 # Création de la session pour interagir avec la base de données
+    # Création de la session pour interagir avec la base de données
     session = Session(engine)
     # Récupérer toutes les instances de la classe State
     q = session.query(State)
     for state in q.all():
         print("{:d}: {:s}".format(state.id, state.name))
-        
+
     session.close()

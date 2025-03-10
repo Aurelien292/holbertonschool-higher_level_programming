@@ -5,6 +5,7 @@ Script to list all cities of a state from the database hbtn_0e_4_usa
 import MySQLdb
 import sys
 
+
 def connectBDD(user, password, db_name):
     """
     Function to connect to the MySQL database
@@ -17,6 +18,7 @@ def connectBDD(user, password, db_name):
         db=db_name
     )
     return connect
+
 
 if __name__ == "__main__":
     # Récupérer les arguments de la ligne de commande
@@ -39,7 +41,7 @@ if __name__ == "__main__":
         WHERE states.name = %s
         ORDER BY cities.id ASC
     """
-    
+
     # Exécution de la requête
     cursor.execute(query, (state_name,))
 

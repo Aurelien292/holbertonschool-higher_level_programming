@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
-import json
-from read_all import read_csv_data, read_json_data, read
+from read_all import read, read_csv_data, read_json_data
+
 
 app = Flask(__name__)
 
@@ -15,14 +15,13 @@ def about():
 @app.route('/contact')
 def contact():
       return render_template('contact.html')
-  
+
 @app.route('/items')
 def items():
       
       file_name = "items.json"
       items = read(file_name)
       return render_template('items.html', items=items)
-
 
 @app.route('/products')
 def display_products():
@@ -42,8 +41,6 @@ def display_products():
             return render_template('product_display.html', error="Product not found")
 	
     return render_template('product_display.html', products=products)
-
-
 
 if __name__ == '__main__':
        app.run(debug=True, port=5000)

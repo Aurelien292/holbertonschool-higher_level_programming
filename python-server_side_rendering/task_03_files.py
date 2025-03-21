@@ -36,7 +36,7 @@ def display_products():
         return render_template('product_display.html', error="Wrong source")
     
     if product_id:
-        products = [product for product in products if product['id'] == product_id]
+        products = [product for product in products if str(product['id']) == product_id]
         if not products:
             return render_template('product_display.html', error="Product not found")
 	

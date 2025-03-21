@@ -11,16 +11,22 @@ def read_json_data():
         return None
 
 def read_csv_data():
-    products = []
-    with open('products.csv', newline='') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            products.append({
-				"id": int(row['id']),
-				"name": row['name'],
-				"category": row['category'],
-				"price": float(row['price'])
-            })
+    """Lire les données depuis un fichier CSV."""
+    try:
+        products = []
+        with open('products.csv', mode='r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                print(row)  # Vérifier le contenu de chaque ligne
+                products.append({
+                    'id': int(row['id']),
+                    'name': row['name'],
+                    'category': row['category'],
+                    'price': float(row['price'])
+                })
+        return products
+    except Exception as e:
+        return None
             
 def read(filename):
      with open(filename, "r") as file:

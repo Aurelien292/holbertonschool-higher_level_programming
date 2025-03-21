@@ -22,6 +22,12 @@ def read_csv_data():
 				"price": float(row['price'])
             })
             
+def read(filename):
+     with open(filename, "r") as file:
+        data = json.load(file)
+        values = data.get("items", [])
+        return values
+            
 def get_products_from_sql():
     """Fonction pour obtenir les produits depuis la base de données SQLite."""
     try:

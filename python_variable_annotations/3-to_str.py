@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def to_str(n: float) -> str:
     """
     Convertit un nombre flottant en une chaîne de caractères.

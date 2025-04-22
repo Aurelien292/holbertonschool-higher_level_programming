@@ -1,5 +1,5 @@
 def to_str(n: float) -> str:
-	"""
+    """
     Convertit un nombre flottant en une chaîne de caractères.
 
     Args:
@@ -8,4 +8,4 @@ def to_str(n: float) -> str:
     Returns:
         str: La représentation en chaîne de caractères du nombre flottant.
     """
-	return str(n)
+    return str(n)
